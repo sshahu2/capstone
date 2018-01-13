@@ -1,0 +1,18 @@
+body{
+    position:center;
+   }
+canvas{
+    position:relative;
+    left:500px;
+}
+.jumbotron{
+    position:relative;
+    top:80px;
+}
+button{
+    position:relative;
+    top:10px;
+}
+h1{
+    text-align: center;
+}

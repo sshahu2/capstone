@@ -1,0 +1,122 @@
+body{
+   background-image: url('/assets/background-image.jpg');
+  font-family: Georgia, serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ min-height: 45em;
+color: beige;
+font-size: 1.1em;
+ }
+
+.subject-area{
+    margin-top:-1.5%;
+margin-left:4.5em;
+}
+
+h4,span{
+    margin-top: -1%;
+}
+
+span{
+    color: blue;
+}
+
+a i{
+    font-size:2em;
+margin-left:4%;
+margin-bottom:7%;
+}
+
+.filter-label{
+    margin-right:-7%;
+}
+
+.btn{
+font-size: 1.01em;
+}
+
+a{
+    color:white;
+}
+
+input{
+    color: black;
+}
+
+.subject-area h3{
+font-size: 1.4em;
+}
+
+.nav li a {
+color: white;
+font-size: 1.2em;
+margin-top:0%;
+
+}
+.nav{
+margin-right:0.2em;
+margin-top:2em;
+}
+
+.nav li a:hover { 
+    background-color: red;
+}
+
+.glyphicon{
+font-size: 1.5em;
+padding-right: 0.2%;
+margin-top:-7%;
+color: beige;
+
+}
+
+.glyphicon-arrow-left{
+    margin-top:-2%; 
+}
+
+.left-with-subject{
+    margin-top:-4%;
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+
+
+.subject-area{
+    margin-top:-0%;
+}
+
+button.navbar-toggle.collapsed {
+    margin-top:-3em;
+    margin-right:-17em;
+    background-color:beige;
+}
+
+ul li{
+    margin-top:5%;
+margin-bottom: 4%;
+padding:1%;
+}
+
+
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 480px){
+.subject-area{
+
+    margin-left:2em;
+}
+
+button.navbar-toggle.collapsed {
+    margin-top:0em;
+    margin-right:-12em;
+    background-color:beige;
+}
+ul{
+    margin-top:5em;
+}
+
+}

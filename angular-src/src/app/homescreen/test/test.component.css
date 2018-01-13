@@ -1,0 +1,54 @@
+body
+{
+    position: center;
+   
+    
+}
+.jumbotron{
+    position:relative;
+    top:100px;
+    background-color:#d1f7b8; 
+}
+.row
+{
+    position:center;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 500px;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FF5733;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 100px;
+    height: 25px;
+    background: #FF5733;
+    cursor: pointer;
+}
+.box{
+    position:relative;
+	width:50px;
+	height:20px;
+    top:10px;
+}
+.text_box{
+    left:50px;
+}

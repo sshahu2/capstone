@@ -1,0 +1,25 @@
+<body>
+
+<div class="box">
+  <h2 >Register</h2>
+<form (submit)="onRegisterSubmit()" autocomplete="off" >
+  <div class="inputBox" >
+    <input type="text" [(ngModel)]="name" name="name" required="true" >
+    <label>Name</label>
+  </div>
+  <div class="inputBox" >
+    <input type="text" [(ngModel)]="username" name="username" required="true">
+    <label>Username</label>
+  </div>
+  <div class="inputBox">
+    <input type="text" [(ngModel)]="email" name="email" required="true" >
+    <label>Email</label>
+  </div>
+  <div class="inputBox">
+    <input type="password" [(ngModel)]="password" name="password" required="true" >
+    <label>Password</label>
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+</div>
+</body>

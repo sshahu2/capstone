@@ -1,0 +1,72 @@
+
+<body>
+                
+                <button type="button" 
+                        class="navbar-toggle collapsed"
+                        (click)="toggleState()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+               
+            </button>
+           
+        
+         <div class="collapse navbar-collapse"
+              [ngClass]="{ 'in': isIn }">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/admin-home']"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+
+    </ul>  
+    </div>
+  
+
+ 
+ <div class="container-fluid">
+<div class="row left-with-subject">
+      <div class="col-md-4 col-xs-4">
+ <a [routerLink]="['/admin-home/admin']" class="return"><i class="glyphicon glyphicon-arrow-left"></i></a>  
+ </div>
+   <div class="col-md-4 col-xs-4 subject-area">
+   <h3>Subject Area :<span>{{subject}}</span></h3>
+ </div>
+ 
+ 
+
+    </div>
+ </div>
+    
+ 
+
+    <br>
+    
+        <div class='row'>
+            <div class='col-md-2 filter-label'>Filter by title:</div>
+            <div class='col-md-4'>
+                <input type='text'
+                    [(ngModel)]='nameFilter' />
+            </div>
+            </div>
+            <br>
+
+        <table class='table  table-condensed'>
+            <thead>
+                <tr>
+                    <th style="min-width: 60px;">Submodules</th>
+                    <th style="width:20px;"> </th>
+                    <th style="width:20px;"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let sub of sub_domain | submodulesFilter: nameFilter'>
+                    <td><a [routerLink]='[sub.name]'>{{ sub.name | uppercase }}</a></td>
+                    
+                    <td><a [routerLink]="[sub.name,'update']" class="btn btn-xs btn-primary">Update</a></td>
+                    <td><a (click)="deleteSubmodule(sub.name)" class="btn btn-xs btn-danger">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a [routerLink]="['addsubmodule']" class="btn btn-xs btn-primary">Add Submodule</a>
+    
+  
+  
+</body>

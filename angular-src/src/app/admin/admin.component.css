@@ -1,0 +1,54 @@
+body{
+   background-image: url('/assets/background-image.jpg');
+  font-family: Georgia, serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ min-height: 49em;
+color: beige;
+font-size: 1.6em;
+ }
+
+ input{
+     color: black;
+ }
+
+.filter{
+margin-top:2%;
+}
+
+.nav li a {
+color: white;
+font-size: 1.2em;
+margin-top:-6%;
+
+}
+.nav{
+margin-right:9%;
+margin-top:2%;
+}
+
+.nav li a:hover { 
+    background-color: red;
+}
+
+
+.col-md-2{
+    margin-left:0.9%;
+    margin-right:-10%;
+}
+
+.glyphicon{
+    font-size: 1.5em;
+padding-right: 0.2%;
+margin-top:-7%;
+}
+
+.btn{
+font-size: 1.01em;
+}
+
+td a{
+    color: beige;
+}

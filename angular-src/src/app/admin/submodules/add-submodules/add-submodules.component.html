@@ -1,0 +1,15 @@
+<body>
+<div class="container">
+  <h3>Create SubModule</h3>
+   <hr>
+   <br>
+   <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" ngNativeValidate>
+       <div class="form-group">
+    <label for="submodule">Submodule Name:</label>
+    <input type="text" class="form-control" id="submodule" [(ngModel)]='q' name="submodule" required>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" [disabled]="formRef.invalid" >Submit</button>
+</form>
+</div>
+</body>

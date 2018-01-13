@@ -1,0 +1,78 @@
+body{
+   background-image: url('/assets/background-image.jpg');
+  font-family: Georgia, serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ min-height: 49em;
+color: beige;
+font-size: 1.2em;
+ }
+
+h4,span{
+    margin-top: -1%;
+}
+
+span{
+    color: blue;
+}
+
+a i{
+font-size:2em;
+margin-left:4%;
+margin-bottom:7%;
+}
+
+.filter-label{
+    margin-right:-7%;
+}
+
+.subdomain{
+    margin-top:2%;
+    margin-left:8%;
+
+}
+
+a{
+    color:beige;
+}
+
+.glyphicon-arrow-left{
+    margin-top:3%;
+}
+
+.btn{
+font-size: 1.01em;
+}
+
+input{
+    color: black;
+}
+
+.subdomain h4{
+    font-size: 1.2em;
+}
+
+.nav li a {
+color: white;
+font-size: 1.2em;
+
+
+}
+.nav{
+margin-right:1%;
+margin-top:1%;
+}
+
+.nav li a:hover { 
+    background-color: red;
+}
+
+.glyphicon{
+font-size: 1.2  em;
+padding-right: 0.2%;
+
+color: beige;
+
+}

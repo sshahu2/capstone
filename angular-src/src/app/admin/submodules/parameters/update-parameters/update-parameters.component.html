@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+  <h3>Update Parameter</h3>
+   <br>
+   <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" ngNativeValidate>
+       
+       <div class="form-group">
+    <label for="parameter">Parameter Name:</label>
+    <input type="text" class="form-control" id="parameter" [(ngModel)]='param' name="parameter" required>
+  </div>
+
+  <div class="form-group">
+    <label for="weightage">Weightage:</label>
+    <input type="range" min="0" max={{maxScore}} value="0" class="slider" id="myRange" name="weightage" [(ngModel)]='weight' >
+  <div class="row">  
+   <div class="col-md-11">
+   <h4>Value: <span id="demo">{{weight}}</span></h4>
+</div>
+<div class="col-md-1">
+<h4><span>Max Value:{{maxScore}}</span></h4>
+</div>
+ </div>
+   </div>
+  
+  <button type="submit" class="btn btn-primary" [disabled]="formRef.invalid || weight==0" >Submit</button>
+</form>
+</div>
+</body>

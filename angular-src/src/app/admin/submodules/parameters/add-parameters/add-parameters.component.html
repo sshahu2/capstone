@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+  <h3>Create Parameter</h3>
+   <hr>
+   <br>
+   <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" ngNativeValidate>
+       <div class="form-group">
+    <label for="parameter">Parameter Name:</label>
+    <input type="text" class="form-control" id="parameter" [(ngModel)]='q' name="parameter" required>
+  </div>
+  <br>
+ <div class="form-group"> 
+<label for="weightage">Weightage Percentage:</label>
+   <input type="range" min="0" max={{scoreRemaining}} value="0" class="slider" id="myRange" name="weightage" [(ngModel)]='storeValue' >
+ <div class="row">  
+   <div class="col-md-11">
+   <h4>Value: <span id="demo">{{storeValue}}</span></h4>
+</div>
+<div class="col-md-1">
+<h4><span>Max Value:{{scoreRemaining}}</span></h4>
+</div>
+ </div>
+ </div>
+<br>
+  <button type="submit" [disabled]="storeValue==0" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</body>

@@ -1,0 +1,80 @@
+body{
+   background-image: url('/assets/background-image.jpg');
+  font-family: Georgia, serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ min-height: 49em;
+
+ }
+
+.nav li a {
+color: beige;
+font-size: 1.2em;
+margin-top:-6%;
+
+}
+.nav{
+margin-right:9%;
+margin-top:2%;
+}
+
+.nav li a:hover { 
+    background-color: red;
+}
+
+.figure-class img{
+width:10em;
+margin-left:6%;
+margin-top: 14.8em;
+box-sizing: content-box;    
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    background-color: beige; 
+}
+
+.admin-home-blockquote
+{
+    color:beige;
+    
+    font-size: 2em;
+    padding-top:1.8%;
+}
+
+
+.figure-class figcaption{
+    margin-left: 6%;
+    color: beige;
+font-size: 1.3em;
+}
+
+.figure-class{
+       
+margin-left: 45%;
+
+}
+
+.glyphicon{
+    font-size: 1.8em;
+padding-right: 0.2%;
+margin-top:-10%;
+}
+
+.btn{
+font-size: 1.01em;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+   .nav li a {
+       margin-top:3%;
+    }
+
+   .admin-home-blockquote{
+        padding-top:10%;
+    }
+}
+#mytxt{
+    color:red;
+}

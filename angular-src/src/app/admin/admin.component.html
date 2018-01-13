@@ -1,0 +1,39 @@
+    <html>
+<body>
+  <ul class="nav navbar-nav navbar-right ">
+      <li><a [routerLink]="['/admin-home']"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+  
+    </ul>
+    
+    <div class='panel-body'>
+        <div class='row filter'>
+            <div class='col-md-2 '>Filter by title:</div>
+            <div class='col-md-4'>
+                <input type='text'
+                    [(ngModel)]='nameFilter' />
+            </div>
+            </div>
+            <br>
+
+        <table class='table  table-condensed' *ngIf='assessments && assessments.length'>
+            <thead>
+                <tr>
+                    <th >Assessments</th>
+                    <th style="width:20px;"> </th>
+                    <th style="width:20px;"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let assessment of assessments | assessmentFilter: nameFilter'>
+                    <td><a [routerLink]="[assessment.subject_name]">{{ assessment.subject_name | uppercase }}</a></td>
+                    
+                    <td><a [routerLink]="['updateAssessment',assessment.subject_name]" class="btn btn-xs btn-primary">Update</a></td>
+                    <td><a (click)="deleteAssessment(assessment.subject_name)" class="btn btn-xs btn-danger">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a routerLink="addAssessment" class="btn  btn-primary">Add Assessment</a>
+    </div>
+    
+</body>
+    </html>

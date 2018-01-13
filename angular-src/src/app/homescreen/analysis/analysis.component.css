@@ -1,0 +1,96 @@
+body
+{
+    position:relative;
+    top:150px;
+    
+}
+.gly
+{
+    right:-460px;
+    top:-55px;
+}
+.box
+{
+    position:relative;
+    top:100px;
+    left:320px;
+    width:700px;
+    height: 70px;
+    padding:10px;
+    background:rgba(f,f,f,0.2);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    border-radius:10px;
+}
+
+.box .inputBox
+{
+    position:relative;
+}
+.box .inputBox input
+{
+    width:100%;
+    padding:10px 0;
+    font-size:16px;
+    color:#000;
+    margin-bottom:30px;
+    border:none;
+    border-bottom:1px solid #000;
+    outline:none;
+    background: transparent;
+}
+.box .inputBox label
+{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:10px 0;
+    font-size:16px;
+    color:#000;
+    pointer-events:none;
+    transition:0.5s;
+}
+.box .inputBox input:focus ~label,
+.box .inputBox INPUT:valid ~label{
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size:12px;
+}
+
+
+
+.panel-pricing {
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+.panel-pricing:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+.panel-pricing .panel-heading {
+  padding: 20px 10px;
+}
+.panel-pricing .panel-heading .fa {
+  margin-top: 10px;
+  font-size: 58px;
+}
+.panel-pricing .list-group-item {
+  color: #777777;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+.panel-pricing .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.panel-pricing .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.panel-pricing .panel-body {
+  background-color: #f0f0f0;
+  font-size: 20px;
+  color: #777777;
+  padding: 20px;
+  margin: 0px;
+}

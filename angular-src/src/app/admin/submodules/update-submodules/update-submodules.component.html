@@ -1,0 +1,15 @@
+<body>
+<div class="container">
+  <h1>Update Submodule Details</h1>
+   <hr><br>
+   <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" ngNativeValidate>
+    <div class="form-group">
+    <label for="Submodule Title">Submodule Title:</label>
+    <input type="text" class="form-control" id="submodule_title" name="submodule_title" [(ngModel)]='subdomain' required="required">
+  </div>
+  
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>
+</body>        
+    

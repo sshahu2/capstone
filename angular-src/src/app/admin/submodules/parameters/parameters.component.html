@@ -1,0 +1,52 @@
+    <body>
+    <ul class="nav navbar-nav navbar-right ">
+      <li><a [routerLink]="['/admin-home']"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+    
+    </ul>
+    <div class="row">
+ <div class="col-md-4 col-xs-4 ">
+ <a [routerLink]="['/admin-home/admin',subject]"><i class="glyphicon glyphicon-arrow-left "></i></a>  
+ </div>
+  <div class="col-md-4 col-xs-4 subdomain">
+   <h4>Subdomain:<span>{{subdomain}}</span></h4>
+ </div>
+          
+ 
+
+ 
+ </div>
+    
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2 filter-label'>Filter by title:</div>
+            <div class='col-md-4'>
+                <input type='text'
+                    [(ngModel)]='nameFilter' />
+            </div>
+            </div>
+            <br>
+
+        <table class='table table-condensed'>
+            <thead>
+                <tr>
+                    <th style="max-width: 10px;">Parameter</th>
+                
+                    <th style="width:40px;">Weight given</th>
+                    <th style="width:20px;"> </th>
+                    <th style="width:20px;"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let param of parameters | parametersFilter:nameFilter ; let i=index '>
+                    <td>{{ param | uppercase }}</td>
+                    <td >{{score_model[i]}}  %</td>
+                    <td><a [routerLink]='[param,score_model[i],"update",scoreRemaining]' class="btn btn-xs btn-primary">Update</a></td>
+                    <td><a (click)='deleteParameter(param)' class="btn btn-xs btn-danger">Delete</a></td>
+               
+                </tr>
+            </tbody>
+        </table>
+        <button [disabled]="scoreRemaining==0" [routerLink]="['addparameters',scoreRemaining]" class="btn btn-xs btn-primary">Add Parameter</button>
+
+    </div>
+    </body>

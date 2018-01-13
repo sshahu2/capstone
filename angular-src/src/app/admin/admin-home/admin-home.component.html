@@ -1,0 +1,24 @@
+<html>
+<body >
+ <div *ngIf="admin">
+  <blockquote class="admin-home-blockquote">
+  Welcome to Capability Maturity Assessment,
+ 
+  <h2 class ="page-header">{{admin.name}}</h2>
+ <ul id="mytxt">
+   <li ><strong>{{admin.username}}</strong></li>
+   <li ><strong>E-mail:{{admin.email}}</strong></li>
+  </ul>
+
+  </blockquote>   
+  </div> 
+  
+    <div class="figure-class">
+    <a routerLink="admin">
+    <img src="assets/assessment-image.png" class="assessments-image">
+     <figcaption>View Assessments</figcaption>
+  </a>
+    </div>
+
+  </body>
+</html>

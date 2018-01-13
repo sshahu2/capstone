@@ -1,0 +1,41 @@
+<div class="box">
+            
+        <div class="inputBox">
+          
+            <input type="text" name="" required="true" [(ngModel)]="filterString">
+            <label>Search</label>
+        </div>
+        
+      </div>
+<body>
+	<!-- Plans -->
+    <section id="plans">
+        <div class="container">
+            <div class="row">
+
+                <!-- item -->
+                <div class="col-md-4 text-center"  *ngFor='let book of Books|filterStr:filterString'>
+                    <div class="panel panel-danger panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>{{ book.title | uppercase }}</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p>Score:{{book.score}}</p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"><i class="fa fa-check"></i> about the topic</li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-danger" [routerLink]="book.id">Select</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /item -->
+
+            </div>
+        </div>
+    </section>
+    <!-- /Plans -->
+
+</body>

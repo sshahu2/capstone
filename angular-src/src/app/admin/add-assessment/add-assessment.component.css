@@ -1,0 +1,11 @@
+body{
+   background-image: url('/assets/background-image.jpg');
+  font-family: Georgia, serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ min-height: 49em;
+color: white;
+font-size: 1.6em;
+ }

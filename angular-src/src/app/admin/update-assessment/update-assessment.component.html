@@ -1,0 +1,15 @@
+<body>
+<div class="container">
+  <h1>Edit Assessment Details</h1>
+   <hr><br>
+   <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" ngNativeValidate>
+    <div class="form-group">
+    <label for="Assessment Title">Assessment Title:</label>
+    <br>
+    <input type="text" class="form-control" id="assessment_title" name="assessment_title" [(ngModel)]='subject' required>
+  </div>
+  
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>        
+</body>
