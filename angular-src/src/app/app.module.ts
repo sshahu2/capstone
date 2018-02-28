@@ -23,7 +23,7 @@ import {AuthService} from './services/auth.service'
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import { QuestionsComponent } from './questions/questions.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { AdminregisterComponent } from './adminregister/adminregister.component';
+//import { AdminregisterComponent } from './adminregister/adminregister.component';
 import { LoadComponent } from './load/load.component';
 import { DemoComponent } from './demo/demo.component';
 //added
@@ -54,11 +54,15 @@ import { NameFilterPipe } from './services/name-filter.pipe';
 import { SubmodulesFilterPipe } from './services/submodules-filter.pipe';
 import { ParametersFilterPipe } from './services/ParametersFilter.pipe';
 
+import { CuppaOAuthModule } from './cuppaOAuth/cuppaOAuth.module';
+import {AdminService} from './services/admin.services';
+import {AdminDashboardComponent} from'./admin/admin-dashboard.component';
+import { AuthServiced }from './cuppaOAuth/auth.service';
 const appRoutes:Routes =[
   {path:'',component:HomeComponent},
    {path:'register',component:RegisterComponent},
     {path:'login',component:LoginComponent},
-     {path:'adminregister',component:AdminregisterComponent},
+  //   {path:'adminregister',component:AdminregisterComponent},
     {path:'adminlogin',component:AdminloginComponent},
     {path:'social',component:SocialComponent},
     {path:'questions',component:QuestionsComponent},
@@ -71,6 +75,9 @@ const appRoutes:Routes =[
   { path: 'explore', component: TestpageComponent,canActivate:[AuthGuard] },
    { path: 'about', component: AboutComponent ,canActivate:[AuthGuard]},
     { path: 'landing', component: LandingComponent },
+    {path:'adc',component:AdminDashboardComponent},
+
+
 
     // {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},
      //again
@@ -103,7 +110,7 @@ const appRoutes:Routes =[
     LoginComponent,
     QuestionsComponent,
     AdminloginComponent,
-    AdminregisterComponent,
+  //  AdminregisterComponent,
     LoadComponent,
      TestpageComponent, SubdomComponent, TestComponent,FilterStrPipe,AboutComponent, ChartComponent, AnalysisComponent, LandingComponent,
     DemoComponent,
@@ -117,18 +124,21 @@ const appRoutes:Routes =[
       AdminHomeComponent ,
       UpdateAssessmentComponent,
       AddAssessmentComponent,
+      AdminDashboardComponent,
+      //CuppaOAuthModule,
       NameFilterPipe,
       SubmodulesFilterPipe,
       ParametersFilterPipe 
   ],
   imports: [
     BrowserModule,
+    CuppaOAuthModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot()
   ],
-  providers: [ValidateService,AuthService,AuthGuard,AauthGuard,GettokenService,BooksService,AssessmentsService],
+  providers: [ValidateService,AuthService,AuthGuard,AauthGuard,GettokenService,BooksService,AssessmentsService,AuthServiced],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,14 +21,7 @@ password:String;
   private router:Router) { }
 
   
-  tlogin(){
-     const userm={
-    username:this.username,
-    password:this.password
-  }
- this.authservice.socialUser().subscribe(data=>{
-    console.log(data);
-  })}
+ 
 }
  
 

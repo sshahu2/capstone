@@ -27,26 +27,27 @@ return this.http.post('http://localhost:3000/auth/authenticate',userm,{headers:h
 map(res=>res.json());
 
 }
-registerAdmin(admin){
+/*registerAdmin(admin){
 let headers=new Headers();
 headers.append('Content-Type','application/json');
 return this.http.post('http://localhost:3000/auth/aregister',admin,{headers:headers}).
 map(res=>res.json());
 }
-authenticateAdmin(admin){
+authenticateAdmin(userm){
   let headers=new Headers();
 headers.append('Content-Type','application/json');
-return this.http.post('http://localhost:3000/auth/aauthenticate',admin,{headers:headers}).
+return this.http.post('http://localhost:3000/auth/authenticate',userm,{headers:headers}).
 map(res=>res.json());
 
 }
+/*
 socialUser(){
  let headers=new Headers();
    headers.append('Content-Type','application/json');
    return this.http.get("http://localhost:3000/auth/twitter/redirect",{headers:headers}).
 map(res=>res.json());
 }
-
+*/
 
 getprofile(){
     let headers=new Headers();
@@ -81,11 +82,11 @@ storeAdminData(token,admin){
   this.admin=admin;
 }
 loadToken(){
-  const token =localStorage.getItem('id_token');
-  this.authToken=token;
+  var mytoken =localStorage.getItem('id_token');
+  this.authToken=mytoken;
 }
 aloadToken(){
-  const token =localStorage.getItem('aid_token');
+  var token =localStorage.getItem('aid_token');
   this.aauthToken=token;
 }
 

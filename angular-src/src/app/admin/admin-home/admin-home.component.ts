@@ -15,8 +15,8 @@ photo:any;
 
   ngOnInit() {
    this.photo="https://static1.squarespace.com/static/582e8efc440243aa943cc4bf/t/58522710e58c62343f3b10b9/1494202575608/sqsp-background.jpg?format=2500w";
-   this.authService.getquestions().subscribe(profilem=>{
-      this.admin=profilem.admin;
+   this.authService.getquestions().subscribe(data=>{
+      this.admin=data.userm;
     },
     err=>{
       console.log(err);

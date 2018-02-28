@@ -23,19 +23,17 @@ onLoginSubmit(){
     username:this.username,
     password:this.password
   }
-  this.authservice.authenticateAdmin(admin).subscribe(data=>{
+  this.authservice.authenticateUser(admin).subscribe(data=>{
     //console.log(data);
-if(data.success){
-  this.authservice.storeAdminData(data.token,data.admin);
+if(data.success && (data.userm.role=="Admin")){
+  this.authservice.storeAdminData(data.token,data.userm);
   this.flashmessage.show("you are logged in",{cssClass:'alert-success',timeout:3000});
-      this.router.navigate(['admin-home']);
-
-
+      this.router.navigate(['/admin-home']);
 }
- else{
+ else {
       this.flashmessage.show("you are not logged in",{cssClass:'alert-danger',timeout:3000});
-      this.router.navigate(['adminlogin']);
-    }
+ this.router.navigate(['/adminlogin']);}
+
   });
 }
 }

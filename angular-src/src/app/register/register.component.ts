@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   username:String;
   email:String;
   password:String;
+  role:String;
 
   constructor(private validateservice:ValidateService,
   private authservice:AuthService,
@@ -30,7 +31,8 @@ onRegisterSubmit(){
      name:this.name,
   username:this.username,
     email:this.email,
-  password:this.password
+  password:this.password,
+  role:this.role
   }
   if(!this.validateservice.validateRegister(userm)){
     //console.log("full details");
@@ -43,9 +45,14 @@ onRegisterSubmit(){
     return false;
   }
   this.authservice.registerUser(userm).subscribe(data=>{
-    if(data.success){
+    if(data.success && (data.userm.role=="User")){
      this.flashmessage.show("you are registered",{cssClass:'alert-success',timeout:3000});
      this.router.navigate(['/login']);
+    }
+   else if(data.success && (data.userm.role=="Admin"))
+   {
+     this.flashmessage.show("you are registered",{cssClass:'alert-success',timeout:3000});
+     this.router.navigate(['/adminlogin']);
     }
     else{
       this.flashmessage.show("you are not  registered",{cssClass:'alert-danger',timeout:3000});

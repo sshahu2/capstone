@@ -18,6 +18,10 @@ const usermSchema=new Schema({
        type:String,
         required:true
     },
+     role:{
+       type:String,
+        required:true
+    }
 });
 
 const Userm=mongoose.model('userm',usermSchema);

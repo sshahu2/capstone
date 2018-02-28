@@ -17,8 +17,8 @@ export class AboutComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.authService.getprofile().subscribe(profilem=>{
-      this.userm=profilem.userm;
+ this.authService.getprofile().subscribe(data=>{
+      this.userm=data.userm;
     },
     err=>{
       console.log(err);

@@ -24,17 +24,19 @@ onLoginSubmit(){
   }
   this.authservice.authenticateUser(userm).subscribe(data=>{
     //console.log(data);
-if(data.success){
+if(data.success && (data.userm.role=="User")){
   this.authservice.storeUserData(data.token,data.userm);
   this.flashmessage.show("you are logged in",{cssClass:'alert-success',timeout:3000});
-      this.router.navigate(['about']);
+      this.router.navigate(['/about']);
 
 
 }
- else{
+ else {
       this.flashmessage.show("you are not logged in",{cssClass:'alert-danger',timeout:3000});
-      this.router.navigate(['login']);
-    }
+      this.router.navigate(['/login']);
+}
+
+
   });
 }
 }
